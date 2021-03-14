@@ -37,7 +37,7 @@ module Gitlab
       raise Error::Parsing, 'The response is not a valid JSON'
     end
 
-    %w[get post put delete].each do |method|
+    %w[get post put delete patch].each do |method|
       define_method method do |path, options = {}|
         params = options.dup
 
